@@ -19,7 +19,7 @@ export default function Board() {
       nextSquares[i] = 'X';
     } else {
       nextSquares[i] = 'O';
-    }    
+    }
     setSquares(nextSquares);
     setXIsNext(!xIsNext);
   }
@@ -28,6 +28,8 @@ export default function Board() {
   let status;
   if (winner) {
     status = 'Winner: ' + winner;
+  } else if (!squares.includes(null)) {
+    status = 'Game Over! No one wins'
   } else {
     status = 'Next player: ' + (xIsNext ? 'X' : 'O');
   }
