@@ -15,6 +15,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "build:ghp": "env BUILD_PATH=docs npm run build && cp docs/index.html docs/404.html", 
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
